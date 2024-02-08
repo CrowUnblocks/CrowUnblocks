@@ -1,0 +1,27 @@
+```javascript
+function unblockSite(site) {
+  // Create a new XMLHttpRequest object.
+  var xhr = new XMLHttpRequest();
+
+  // Set the request method to "GET".
+  xhr.open("GET", site, true);
+
+  // Set the request headers.
+  xhr.setRequestHeader("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36");
+
+  // Send the request.
+  xhr.send();
+
+  // Check the response status code.
+  if (xhr.status == 200) {
+    // The request was successful.
+    alert("The website has been unblocked.");
+  } else {
+    // The request failed.
+    alert("The website could not be unblocked.");
+  }
+}
+
+// Call the function to unblock the website.
+unblockSite("https://www.example.com");
+```
